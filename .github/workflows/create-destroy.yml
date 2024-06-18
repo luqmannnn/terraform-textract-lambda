@@ -46,4 +46,4 @@ jobs:
 
             - name: Run terraform ${{ inputs.action }}
               working-directory: terraform
-              run: echo "terraform ${{ inputs.action }} --auto-approve"
+              run: terraform ${{ inputs.action }} --auto-approve
