@@ -37,10 +37,13 @@ jobs:
               run: echo ${{ inputs.action }}
 
             - name: Run terraform init
+              working-directory: terraform
               run: terraform init
             
             - name: Run terraform plan
+              working-directory: terraform
               run: terraform plan
 
             - name: Run terraform ${{ inputs.action }}
+              working-directory: terraform
               run: echo "terraform ${{ inputs.action }} --auto-approve"
